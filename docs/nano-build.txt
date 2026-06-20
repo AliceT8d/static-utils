@@ -1,0 +1,23 @@
+前往 https://www.nano-editor.org/ 下载 nano 的源代码。
+
+为了可以顺利编译通过，需要安装下面的包
+    autoconf    (version >= 2.69)
+    automake    (version >= 1.14)
+    autopoint   (version >= 0.20)
+    gcc         (version >= 5.0)
+    gettext     (version >= 0.20)
+    git         (version >= 2.7.4)
+    groff       (version >= 1.12)
+    make        (any version)
+    pkg-config  (version >= 0.22)
+    texinfo     (version >= 4.0)
+
+你仍然需要 ncurses 的头文件，在 Debian 上安装 libncurses-dev，在 Fedora 上 安装 ncurses-devel，其他 Linux 发行版也有对应的包。
+
+命令：（在 nano 源码文件夹内）
+./configure LDFLAGS=-static
+make
+
+x86_64 nano sha256:
+67DA304D58074527978B48DFC835AAB9C4E1B78A003D0A056B76987C10E2A56B
+哈希值仅供参考，因为编译依赖编译工具和第三方库，可能因为版本差异导致哈希的值发生改变。
